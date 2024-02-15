@@ -1,30 +1,35 @@
-#include <stdio.h>
-#include <string.h>
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+	char str[100];
+	int l=0,k,j,i;
+	printf("enter str\n");
+	scanf("%[^\n]s",str);
+	for(k=0;str[k]!=0;k++)
+	{
+		l++;
+	}
+//	printf("%d\n",l);
+//
+int c=0;
+	for(i=0;i<=l+1;i++)
+	{
+		
+		if((str[i]==' ')||(i<=l+1))
+		{
+			k=l-1;
+			for(j=i-1;j>=c;j--)
+			{
+				
+				printf("%c",str[j]);
+				
+			}
+			c=i+1;
 
-int main() {
-    char str[100];
-
-    // Get input for a string from the user
-    printf("Enter a string: ");
-    scanf("%s", str);
-
-    int n = strlen(str);
-
-    
-    for (int i = 0; i < n - 1; i++) {
-        for (int j = i + 1; j < n; j++) {
-            if (str[i] > str[j]) {
-                
-                char temp = str[i];
-                str[i] = str[j];
-                str[j] = temp;
-            }
-        }
-    }
-
-    
-    printf("String in dictionary order: %s\n", str);
-
-    return 0;
+		
+		
+		
+	}
 }
-
+}

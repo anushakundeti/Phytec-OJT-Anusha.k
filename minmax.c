@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+
 void main()
 {
 	int i,n,min=0,max=0;
@@ -23,4 +24,3 @@ void main()
 	}
 	printf("min=%d\nmax=%d\n",min,max);
 }
-

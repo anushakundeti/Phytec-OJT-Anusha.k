@@ -1,33 +1,70 @@
-#include <stdio.h>
-#include <stdbool.h>
-
-int main() {
-    int start, end;
-
-    // Get input for two numbers from the user
-    printf("Enter the start number: ");
-    scanf("%d", &start);
-
-    printf("Enter the end number: ");
-    scanf("%d", &end);
-
-    // Print prime numbers between the two numbers
-    printf("Prime numbers between %d and %d are:\n", start, end);
-    for (int i = start; i <= end; i++) {
-        if (i > 1) {
-            bool isPrime = true;
-            for (int j = 2; j * j <= i; j++) {
-                if (i % j == 0) {
-                    isPrime = false;
-                    break;
-                }
-            }
-            if (isPrime) {
-                printf("%d\n", i);
-            }
-        }
-    }
-
-    return 0;
+#include<stdio.h>
+void main()
+{
+	int i,j,c=0,n;
+	printf("enter n\n");
+	scanf("%d",&n);
+	for(i=1;i<n;i++)
+	{
+		for(j=2;j<i;j++)
+		{
+			if(i%j==0)
+			{
+				c++;
+			}
+		}
+	
+			if(c==0&&i!=1)
+				printf("%d\n",i);
+		c=0;
+		
+	}
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*{
+	int i,j,range,count;
+	printf("enter the range :");
+	scanf("%d",&range);
+	for(i=2;i<range;i++)
+	{
+		count=0;
+		for(j=1;j<range;j++)
+		{
+			if(i%j==0)
+				count++;
+		}
+	
+	if(count==1)
+	{
+		printf("%d\n",i);
+	}
+}
+}*/

@@ -1,25 +1,23 @@
 #include<stdio.h>
-#include<stdlib.h>
-int main(int argc,char *argv[])
+void main()
 {
-int sum=0, i;
-	if(argc == 2)
+	int i,n,sum=0;
+	printf("enter n\n");
+	scanf("%d",&n);
+	for(i=1;i<n;i++)
 	{
-		int num=atoi(argv[1]);
-		for(i=1;i<=num/2;i++)
+		if(n%i==0)
 		{
-			if(num%i == 0)
-				sum=sum+i;
-		}
-		if(num == sum)
-			printf("Perfect Number\n");
-		else
-			printf("Not a perfect number\n");
 
+			sum=sum+i;
+		}
 	}
+	if(n==sum)
+	
+		printf("pn\n");
+	
+	
 	else
-	{
-	printf("Invalid arguments\n");
-	printf("Please enter ./perfect number\n");
-	}
+		printf("not pn\n");
+	
 }
