@@ -1,25 +1,17 @@
 #include<stdio.h>
-#include<unistd.h>
-#include<signal.h>
-void myfun()
+int retu(float *ptr,int size)
 {
-printf("SiGINT Signal handled\n");
-printf("SiGINT Signal handled in myfun\n");
-printf("SiGINT Signal handled in myfun using function pointers\n");
+	int i,x;
+	for(i=0;i<size;i++)
+	{
+	printf("%d\n",(*ptr+i));
+	x=*ptr++;
+	}
+	return x;
 }
-
 int main()
 {
-	int count=0;
-	signal(2,myfun);//call back function
-	while(1)
-	{
-		printf("In while loop\n");
-		printf("Count = %d\n",count);
-		count++;
-		sleep(1);
-	}
-
-
-
+	int x[4]={1,1,1,1};
+	printf("%d\n",retu(x,10));
+	return 0;
 }

@@ -1,18 +1,12 @@
 #include<stdio.h>
 void main()
 {
-	int i ,j,n;
-	printf("enter n\n ");
-	scanf("%d",&n);
-	for(i=0;i<n;i++)
-	{
-		for(j=0;i<n;j++)
-		{
-			printf("#");
-		}
-	}
-
-		printf("\n");
+	int x=23;
+	int *ptr;
+	
+	
+	ptr =&x;
+	
+	printf("The address of variable x=%p\n",&x);
+	printf("The value stored in the address %p=%d\n",ptr,*ptr);
 }
-
-
