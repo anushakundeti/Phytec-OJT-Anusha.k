@@ -1,20 +1,27 @@
-#include<stdio.h>
-void main()
-{
-	int x=10,y=20;
-	int *ptr,*ptr2;
+#include <stdio.h>
 
-	ptr=&x;
-	ptr2=&y;
+// Define a structure named 'Person'
+struct Person {
+    char name[50];
+    int age;
+    float height;
+};
 
-	printf("Address of x:%p\n",ptr);
-	printf("Address of y:%p\n",ptr2);
+int main() {
+    // Declare a variable of type 'struct Person'
+    struct Person person1;
 
-	ptr++;
-	ptr2--;
+    // Assign values to the members of the structure
+    strcpy(person1.name, "John Doe");
+    person1.age = 25;
+    person1.height = 5.9;
 
+    // Display the information using the structure
+    printf("Person Information:\n");
+    printf("Name: %s\n", person1.name);
+    printf("Age: %d\n", person1.age);
+    printf("Height: %.2f feet\n", person1.height);
 
-	printf("Incremented ptr:%p\n",ptr);
-	printf("decremented ptr2:%p\n",ptr2);
-
+    return 0;
 }
+
