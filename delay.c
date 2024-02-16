@@ -1,5 +1,4 @@
 
-
 #include "delay.h"
 #include "stm32f4xx.h"                  // Device header
 
@@ -32,5 +31,6 @@ void delay(uint32_t ms)
 	uint32_t start=millis();
 
 	do{;}while(millis()-start<ms);
+
 
 	}
