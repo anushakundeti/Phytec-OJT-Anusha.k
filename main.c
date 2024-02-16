@@ -1,9 +1,9 @@
 /* USER CODE BEGIN Header */
 /**
-  ******************************************************************************
+  **************************
   * @file           : main.c
   * @brief          : Main program body
-  ******************************************************************************
+  **************************
   * @attention
   *
   * Copyright (c) 2023 STMicroelectronics.
@@ -13,7 +13,7 @@
   * in the root directory of this software component.
   * If no LICENSE file comes with this software, it is provided AS-IS.
   *
-  ******************************************************************************
+  **************************
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
@@ -43,8 +43,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-#define DWT_CTRL (*(volatile uint32_t *)0XE0001000)
-
+#define DWT_CTRL (*(volatile uint32_t *)0xE0001000)
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -93,11 +92,13 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
-  DWT_CTRL |=(1<<0);
-  SEGGER_SYSVIEW_Conf();
-  SEGGER_SYSVIEW_Start();
+  //  Enable CYCCNT counter
+    	  	  DWT_CTRL |= (1<<0);
 
-  	  status=xTaskCreate(task1_handler,"Task-1", 200,"Hello world from Task-1" , 2, &task1_handle);
+    	  	  SEGGER_SYSVIEW_Conf();
+    	  	  SEGGER_SYSVIEW_Start();
+
+  	  	  status=xTaskCreate(task1_handler,"Task-1", 200,"Hello world from Task-1" , 2, &task1_handle);
     	  configASSERT(status== pdPASS);
 
     	  status=xTaskCreate(task2_handler,"Task-2", 200,"Hello world from Task-2" , 2, &task2_handle);
@@ -226,6 +227,19 @@ static void task2_handler(void * parameters)
 		//taskYIELD();
 		}
 }
+
+/*int _write(int file, char *ptr, int len)
+{
+  (void)file;
+  int DataIdx;
+
+  for (DataIdx = 0; DataIdx < len; DataIdx++)
+  {
+    ITM_SendChar(*ptr++);
+  }
+  return len;
+}
+*/
 /* USER CODE END 4 */
 
 /**
