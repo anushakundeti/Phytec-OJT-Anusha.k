@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#read name age company
+read -p "Enter your name:" name
+read -p "Enter your age:" age
+read -p "Enter your company name:" company
+echo "My name is $name"
+echo "I am $age years old"
+echo "I am working for $company"
+exit 0 

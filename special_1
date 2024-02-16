@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [[ $# -ne 2 ]]; then
+	echo "you didn't enter axact;y 2 args"
+	echo "usage : $0 <file> <file2>"
+	exit 1
+fi

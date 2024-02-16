@@ -1,0 +1,8 @@
+#!/bin/bash
+echo "my 1st arg $1"
+echo "my 2nd arg $2"
+echo "my 3rd arg $3"
+echo "my 10th arg ${10}"
+echo "total no. of arguments passed: $#"
+
+exit 0
