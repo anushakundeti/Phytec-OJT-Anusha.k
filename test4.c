@@ -1,16 +1,24 @@
 #include <stdio.h>
-void main() 
-{
-int i;
-  int x[5] = {1, 2, 3, 4, 5};
-  int* ptr;
 
-  
-  ptr = &x[2]; 
+// Defining a structure
+struct Rectangle {
+    int length;
+    int width;
+};
 
-  printf("*ptr = %d \n", *ptr);   
-  printf("*(ptr+i) = %d \n", (*ptr+i)); 
-  printf("*(ptr-i) = %d",( *ptr-i));  
-
-  
+// Function to calculate area of rectangle
+int calculateArea(struct Rectangle r) {
+    return r.length * r.width;
 }
+
+int main() {
+    struct Rectangle rect = {5, 10};
+
+    // Passing structure to function
+    int area = calculateArea(rect);
+
+    printf("Area of rectangle: %d\n", area);
+
+    return 0;
+}
+

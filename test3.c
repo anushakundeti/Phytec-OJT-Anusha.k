@@ -1,17 +1,22 @@
-#include<stdio.h>
-void swap(int *a,int *b)
-{
-	int t;
-	 t= *a;
-	*a= *b;
-	*b= t;
-}
-void main()
-{
-	int a,b;
-	printf("enter values of a and b\n");
-	scanf("%d %d" ,&a,&b);
-	swap(&a,&b);
-	printf("%d %d\n",a,b);
+#include <stdio.h>
+
+// Defining a structure
+struct Point {
+    int x;
+    int y;
+};
+
+int main() {
+    // Declaring structure variable
+    struct Point p1;
+
+    // Initializing structure members
+    p1.x = 10;
+    p1.y = 20;
+
+    // Accessing and printing structure members
+    printf("Coordinates of point: (%d, %d)\n", p1.x, p1.y);
+
+    return 0;
 }
 
