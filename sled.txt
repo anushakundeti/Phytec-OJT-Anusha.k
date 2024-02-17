@@ -1,0 +1,71 @@
+
+
+download sled driver zip (google class)
+
+
+unzip sled_driver1.zip 
+
+https://github.com/rugged-board (google)
+uboot-rba5d2x (open)
+change from 'master' to 'u-boot-rba5d2x'
+click on code and download zip
+unzip it
+
+add sled driver and uboot-rba5d2x in new folder
+
+
+
+follow step1,2,3 in driver-readme (in sled_driver)
+
+
+step-4)copy dtsi file in sleddriver folder to uboot/arch/arm/dts folder
+
+
+follow step1,2,3 in driver-readme
+
+
+
+(path inside uboot) . /opt/poky-tiny/2.5.2/environment-setup-cortexa5hf-neon-poky-linux-musleabi 
+
+
+
+make rugged_board_a5d2x_qspiflash_defconfig
+
+
+make menuconfig
+
+
+devicedrivers / led support / enable first 3
+
+
+commandline interface / enable sled test
+
+
+make
+
+
+cp u-boot.bin /var/lib/tftpboot
+
+
+sudo minicom
+enter
+
+
+setenv ipaddr 192.168.1.10                                                   
+setenv serverip 192.168.1.205                                                  
+ping 192.168.1.205 
+saveenv
+(if not alive  remove wifi and put rugged board) 
+
+
+(in developer.ruggedboard open Flash the NOR using tftp For Rugged Board A5d2x, u-boot)
+sf probe
+tftp 0x21FF0000 u-boot.bin
+sf erase 0x20000 0x80000
+sf write 0x21FF0000 0x20000 0x80000
+
+
+
+reset
+
+sled ds1 on

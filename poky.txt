@@ -1,0 +1,15 @@
+"Poky" is not a standalone software or concept but rather a key component of the Yocto Project, an open-source project for building custom Linux-based distributions for embedded systems. In the context of the Yocto Project, "Poky" refers to the reference build system and set of metadata and tools used for creating these custom Linux distributions.
+
+Here's what "Poky" represents within the Yocto Project:
+
+1)Build System: Poky provides the core build system used by the Yocto Project. It includes the BitBake build tool, which is responsible for fetching source code, configuring, compiling, and packaging software components into a Linux distribution.
+
+2)Reference Metadata: Poky includes a set of reference metadata, recipes, and configuration files that serve as a starting point for building custom Linux distributions. These reference files help users define how software components should be built, configured, and integrated into the distribution.
+
+3)Layer Structure: Poky is organized in layers, and each layer can contain metadata, recipes, and configuration specific to a particular set of software packages, hardware platforms, or customizations. Users can create their own layers to extend or customize their Yocto Project-based distributions.
+
+4)Configuration and Environment: Poky includes scripts and configuration files to set up the Yocto Project environment on the host PC, including specifying the target hardware architecture, choosing the desired Linux distribution image, and configuring various build options.
+
+5)Community and Development: Poky is maintained and developed by the Yocto Project community, which includes contributions from various organizations and individuals. It benefits from ongoing improvements, bug fixes, and support resources provided by the community.
+
+In summary, "Poky" is the heart of the Yocto Project, providing the build system and reference metadata necessary for creating customized Linux distributions for embedded systems. Users typically start with Poky as a foundation and customize it by adding their own layers, configurations, and recipes to meet the specific requirements of their target hardware and application.

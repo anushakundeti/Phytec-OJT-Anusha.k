@@ -1,0 +1,9 @@
+BSP manual:
+**********
+https://www.phytec.de/cdocuments/?doc=UgC7Ig#BSPReferenceManualphyCOREi-MX8MMiniNanoL1002e-A4-BuildKernel
+
+
+
+SDK toolchain:
+**************
+https://download.phytec.de/Software/Linux/BSP-Yocto-i.MX8MM/BSP-Yocto-NXP-i.MX8MM-PD22.1.0/sdk/ampliphy-vendor-xwayland/phytec-ampliphy-vendor-xwayland-glibc-x86_64-phytec-qt5demo-image-cortexa53-crypto-toolchain-BSP-Yocto-NXP-i.MX8MM-PD22.1.0.sh
