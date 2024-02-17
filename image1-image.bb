@@ -1,0 +1,11 @@
+require recipes-core/images/core-image-minimal.bb
+#IMAGE_INSTALL:append = "usbutils"
+#IMAGE_FEATURES = "ssh-server-dropbear debug-tweaks splash"
+#IMAGE_INSTALL += "hello hello-doc"
+#IMAGE_INSTALL += "myappend"
+#IMAGE_FEATURES += "splash"
+#IMAGE_INSTALL += "myhello"
+#IMAGE_INSTALL += "mystatic-dev mystatic-staticdev"
+#IMAGE_INSTALL += "hello"
+#IMAGE_INSTALL += "example"
+IMAGE_INSTALL += "calci"
