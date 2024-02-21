@@ -1,0 +1,33 @@
+This book comprises 17 chapters in all, spread across four sections. It isn't necessary to read
+the book straight through if you're already comfortable with some of the material. For
+example, if you're already comfortable with basic RTOS concepts and real-time systems,
+feel free to skip to Chapter 4 , Selecting the Right MCU. The following are brief descriptions
+of the chapters that this book is made up of:
+Chapter 1 , Introducing Real-Time Systems, is a simple introduction to what an RTOS is and
+when and why to use one. Hardware and software alternatives to an MCU-based RTOS are
+also discussed.
+Chapter 2 , Understanding RTOS Tasks, provides a comparison of super loops with RTOS
+tasks, including various ways parallel operations can be achieved using both.
+Chapter 3 , Task Signaling and Communication Mechanisms, is a short introduction to more
+RTOS concepts with lots of diagrams. This chapter, along with Chapter 2 , Understanding
+RTOS Tasks, should be useful as a reference and a quick refresher on the concepts and
+terminology, should you ever need it.
+Chapter 4 , Selecting the Right MCU, helps you understand what considerations should be
+made when selecting an MCU. After gaining an appreciation of the inter-dependency
+between hardware and firmware, we look at why it is so important that hardware and
+firmware engineers both have a hand in system design.
+Chapter 5 , Selecting an IDE, introduces and discusses various types of Integrated
+Development Environments (IDEs), including reasons why you might decide to choose
+one over another (or none at all). Instructions on setting up STM32CubeIDE and importing
+the example code are covered here.
+Chapter 6 , Debugging Tools for Real-Time Systems, covers tools for debugging embedded
+systems, including the debugging tool we'll be using throughout the remainder of the book
+– SEGGER Ozone and SEGGER SystemView visualization software. Instructions on how to
+use Ozone and SystemView are covered here. Hardware-based test equipment and some
+other useful tools for your embedded system development workflow are also included.
+Chapter 7 , The FreeRTOS Scheduler, teaches you the various ways to create tasks using
+FreeRTOS and how to troubleshoot startup failures. You will gain an understanding of task
+states and the different ways performance can be optimized.
+Chapter 8 , Protecting Data and Synchronizing Tasks, covers task synchronization using
+semaphores and data protection using mutexes, as well as how to avoid race conditions
+and priority inversion. Software timers are also covered.
